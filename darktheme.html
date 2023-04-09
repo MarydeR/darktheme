@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Theme</title>
+    <style>
+      button {
+        display: block;
+        margin: 10px 0;
+      }
+      .dark {
+        background-color: black;
+      }
+      .light {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button id="darkbutton">Dark Theme</button>
+      <button id="lightbutton">Light Theme</button>
+    </div>
+
+    <script>
+      function darktheme() {
+        let body = document.querySelector("body");
+        body.classList.add("dark");
+      }
+      function whitetheme() {
+        let body = document.querySelector("body");
+        body.classList.remove("dark");
+      }
+
+      let dark = document.querySelector("#darkbutton");
+      dark.addEventListener("click", darktheme);
+
+      let white = document.querySelector("#lightbutton");
+      white.addEventListener("click", whitetheme);
+    </script>
+  </body>
+</html>
